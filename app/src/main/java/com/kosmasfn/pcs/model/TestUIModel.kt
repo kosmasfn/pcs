@@ -1,5 +1,7 @@
 package com.kosmasfn.pcs.model
 
+import java.io.Serializable
+
 data class TestUIModel(
     val addressNo: String = "",
     val avatar: String = "",
@@ -11,4 +13,4 @@ data class TestUIModel(
     val name: String = "",
     val street: String = "",
     val zipCode: String = ""
-)
+) : Serializable

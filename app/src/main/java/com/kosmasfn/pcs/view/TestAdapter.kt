@@ -11,10 +11,10 @@ import com.kosmasfn.core.base.convertToLocalDateString
 import com.kosmasfn.pcs.databinding.AdapterTestBinding
 import com.kosmasfn.pcs.model.TestUIModel
 
-class TestAdapter() : BaseBindingAdapter<BaseBindingViewHolder>() {
+class TestAdapter(private val onClick: ((data: TestUIModel) -> Unit)) :
+    BaseBindingAdapter<BaseBindingViewHolder>() {
 
     private val listData = mutableListOf<TestUIModel>()
-    var onClick: ((url: String) -> Unit)? = null
 
     @SuppressLint("NotifyDataSetChanged")
     fun addItems(list: List<TestUIModel>) {
@@ -55,6 +55,9 @@ class TestAdapter() : BaseBindingAdapter<BaseBindingViewHolder>() {
         bind.tvCountry.text = data.country
         bind.tvZipcode.text = data.zipCode
         bind.tvCreatedAt.text = data.createdAt.convertToLocalDateString()
+        bind.root.setOnClickListener {
+            onClick.invoke(data)
+        }
     }
 
     override fun getItemCount(): Int = listData.size
