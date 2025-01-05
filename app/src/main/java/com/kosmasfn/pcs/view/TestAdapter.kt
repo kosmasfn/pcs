@@ -48,12 +48,6 @@ class TestAdapter(private val onClick: ((data: TestUIModel) -> Unit)) :
             .into(bind.ivData)
 
         bind.tvName.text = data.name
-        bind.tvStreet.text = data.street
-        bind.tvAddress.text = data.addressNo
-        bind.tvCounty.text = data.county
-        bind.tvCity.text = data.city
-        bind.tvCountry.text = data.country
-        bind.tvZipcode.text = data.zipCode
         bind.tvCreatedAt.text = data.createdAt.convertToLocalDateString()
         bind.root.setOnClickListener {
             onClick.invoke(data)

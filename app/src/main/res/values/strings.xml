@@ -8,4 +8,8 @@
     <string name="zip_code">Zip Code</string>
     <string name="created_at">Created At</string>
     <string name="county">County</string>
+    <string name="first_name">First Name</string>
+    <string name="address">Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="colon">:</string>
 </resources>
