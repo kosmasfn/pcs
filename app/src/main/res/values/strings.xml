@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">pcs</string>
+    <string name="name">Name</string>
+    <string name="street">Street</string>
+    <string name="address_no">Address No</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="created_at">Created At</string>
+    <string name="county">County</string>
+</resources>
